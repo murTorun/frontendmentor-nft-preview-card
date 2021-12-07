@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root {
+    --primary-one: hsl(215, 51%, 70%);
+    --primary-two: hsl(178, 100%, 50%);
+
+    --dark-blue-one: hsl(217, 54%, 11%);
+    --dark-blue-two: hsl(216, 50%, 16%);
+    --darkblue-three: hsl(215, 32%, 27%);
+
+    --white: hsl(0, 0%, 100%);
+
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-600: 600;
+
+    --transition: 0.4s all ease-in-out;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--dark-blue-one);
+    box-sizing: border-box;
+
+}
+
+
+p {
+    font-size: 18px;
+    color: var(--primary-one);
+    font-weight: var(--font-weight-300);
+}
+
+/* Card */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.card {
+    background-color: var(--dark-blue-two);
+    width: 100%;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 0 60px 0px rgba(0, 0, 0, 0.6);
+    padding-bottom: 25px;
+    position: relative;
+
+}
+
+/* Card Image */
+
+.card-image {
+    max-width: 300px;
+    margin: 25px;
+    border-radius: 10px;
+}
+
+.card-image-hover {
+    width: 300px;
+    height: 300px;
+    margin: 25px;
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: hsla(178, 100%, 50%, .7);
+    border-radius: 10px;
+    opacity: 0;
+    transition: var(--transition);
+
+
+}
+
+/* Card Title and Description */
+
+.card-title {
+    color: white;
+    transition: var(--transition);
+}
+
+.card-title,
+.card-description {
+    margin-left: 25px;
+}
+
+/* Time left and Price */
+.card-time-left-and-price {
+    display: flex;
+    justify-content: space-between;
+    margin: 25px;
+    padding-bottom: 25px;
+    border-bottom: 2px solid var(--darkblue-three);
+
+
+}
+
+.card-time-left {
+    color: var(--primary-one);
+    display: flex;
+
+}
+
+.card-time-left-and-price span {
+    margin-left: .5rem;
+}
+
+.card-price {
+    color: var(--primary-two);
+    display: flex;
+    align-items: center;
+}
+
+/* Creator */
+
+.card-creator {
+    color: var(--primary-one);
+    margin-inline: 25px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.card-creator img {
+    max-width: 2.5rem;
+    border: 1px solid var(--white);
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.card-creator-name a {
+    color: var(--white);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+/* Hover */
+.card-creator-name a:hover,
+.card-title:hover {
+    cursor: pointer;
+    color: var(--primary-two);
+}
+
+.card-image-hover:hover {
+    cursor: pointer;
+    opacity: 1;
+}
